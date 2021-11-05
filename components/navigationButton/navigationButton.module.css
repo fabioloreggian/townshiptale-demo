@@ -20,6 +20,7 @@
     flex: 0 0 auto;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .selected {
@@ -70,6 +71,19 @@
     font-family: Josefin Sans, sans-serif;
 }
 
-.text:hover {
+.centerLogo  .svg > svg{
+    margin-top: 8px;
+    width: 240px;
+}
+
+@media (max-width: 960px) {
+    .rightLink{
+        margin-bottom: -4px;
+        padding-right: 8px;
+    }
+    .leftLink {
+        margin-bottom: -4px;
+        margin-left: -8px;
+    }
 }
 

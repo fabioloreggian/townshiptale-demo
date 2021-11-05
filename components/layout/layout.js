@@ -8,6 +8,8 @@ import Creators from "../svgs/creators";
 import Presskit from "../svgs/presskit";
 import SignUp from "../svgs/signup";
 import Logo from "../svgs/logo";
+import Hamburger from "../svgs/hamburger";
+import BigLogo from "../svgs/bigLogo";
 
 export default function Layout(props) {
   const links = [
@@ -60,6 +62,32 @@ export default function Layout(props) {
       link: '/account/signup',
       svg: <SignUp/>
     }
+  ];
+
+  const linksMobile = [
+    {
+      name: '',
+      key: 'hamburger',
+      onClick: () => {
+        console.log("Hello there");
+      },
+      svg: <Hamburger />
+    },
+    {
+      name: '',
+      key: 'home',
+      page: true,
+      link: '/',
+      centerLogo: true,
+      svg: <BigLogo/>
+    },
+    {
+      name: 'Sign Up',
+      key: 'signup',
+      page: true,
+      link: '/account/signup',
+      svg: <SignUp/>
+    }
   ]
   return (
     <div className={styles.container}>
@@ -86,6 +114,9 @@ export default function Layout(props) {
         </div>
         <div className={styles.navigationContainer}>
           {links.map((link, index) => <NavigationButton key={link.key} selected={link.key === props.route} link={link} index={index} size={links.length}/>)}
+        </div>
+        <div className={styles.topBarMobile}>
+          {linksMobile.map((link, index) => <NavigationButton key={link.key} selected={link.key === props.route} link={link} index={index} size={linksMobile.length}/>)}
         </div>
       </div>
       {props.children}
