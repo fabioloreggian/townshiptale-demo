@@ -2,52 +2,64 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import NavigationButton from "../navigationButton/navigationButton";
 import Supporter from "../svgs/supporter";
+import News from "../svgs/news";
+import Discord from "../svgs/discord";
+import Creators from "../svgs/creators";
+import Presskit from "../svgs/presskit";
+import SignUp from "../svgs/signup";
+import Logo from "../svgs/logo";
 
 export default function Layout(props) {
   const links = [
-    /*{
+    {
       name: '',
       key: 'home',
       page: true,
-      link: '/'
-    },*/
+      link: '/',
+      svg: <Logo />
+    },
     {
       name: 'Supporter',
       key: 'supporter',
       page: true,
       link: '/supporter',
-      svg: <Supporter className={styles.svg}/>
+      svg: <Supporter/>
     },
-    /*{
+    {
       name: 'News',
       key: 'news',
       page: true,
-      link: '/news'
+      link: '/news',
+      svg: <News/>
     },
     {
       name: 'Discord',
       key: 'discord',
       page: false,
-      link: 'https://discord.gg/townshiptale'
+      link: 'https://discord.gg/townshiptale',
+      svg: <Discord/>
     },
     {
       name: 'Creators',
       key: 'creators',
       page: false,
-      link: 'https://form.typeform.com/to/Hjo1URZq'
+      link: 'https://form.typeform.com/to/Hjo1URZq',
+      svg: <Creators/>
     },
     {
       name: 'Presskit',
       key: 'presskit',
       page: false,
-      link: 'https://presskit.townshiptale.com/'
+      link: 'https://presskit.townshiptale.com/',
+      svg: <Presskit/>
     },
     {
       name: 'Sign Up',
       key: 'signup',
       page: true,
-      link: '/account/signup'
-    }*/
+      link: '/account/signup',
+      svg: <SignUp/>
+    }
   ]
   return (
     <div className={styles.container}>
@@ -73,7 +85,7 @@ export default function Layout(props) {
           </div>
         </div>
         <div className={styles.navigationContainer}>
-          {links.map((link, index) => <NavigationButton key={link.key} link={link} index={index}/>)}
+          {links.map((link, index) => <NavigationButton key={link.key} selected={link.key === props.route} link={link} index={index} size={links.length}/>)}
         </div>
       </div>
       {props.children}
