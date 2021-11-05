@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './layout.module.css';
 import NavigationButton from "../navigationButton/navigationButton";
+import Supporter from "../svgs/supporter";
 
 export default function Layout(props) {
   const links = [
@@ -14,7 +15,8 @@ export default function Layout(props) {
       name: 'Supporter',
       key: 'supporter',
       page: true,
-      link: '/supporter'
+      link: '/supporter',
+      svg: <Supporter className={styles.svg}/>
     },
     /*{
       name: 'News',
