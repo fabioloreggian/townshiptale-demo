@@ -1,0 +1,158 @@
+.background {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    position: fixed;
+    background-color: #3b2418;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-image: url("https://townshiptale.com/static/bg_news.jpg");
+    background-size: 140%;
+}
+
+.newsContainer {
+    background-color: #170c07;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 9.3rem auto 0;
+    padding: 0 0 8rem;
+    width: 57.4rem;
+    height: auto;
+}
+
+.headerContainer {
+    background-image: url("https://townshiptale.com/static/news/header.svg");
+    background-repeat: no-repeat;
+    width: 62.6rem;
+    height: 11.3rem;
+    margin: -2rem 0 1rem;
+    display: flex;
+    -webkit-transform: translateX(-.4rem);
+    transform: translateX(-.4rem);
+    flex-direction: column;
+    justify-content: center;
+}
+
+.headerTitle,
+.headerDescription {
+    text-align: center;
+    font-family: adorn-condensed-sans,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f7ded2;
+}
+
+.headerTitle {
+    font-size: 4.85rem;
+    margin: .6rem 0 0;
+    padding: 0;
+}
+
+.headerDescription {
+    font-size: 1.5rem;
+    margin: -.6rem 0 0;
+}
+
+.footer{
+    padding: 4.7514em 1em;
+    background-color: #261209;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+    position: relative;
+}
+
+.footerDownloadContainer {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerDownloadLink {
+    font-size: 14px;
+    color: #7e7e7e;
+    font-weight: 600;
+    margin: 0;
+    flex: 0 1 auto;
+}
+
+.footerSocialUl {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 2em auto 0;
+    max-width: 25em;
+}
+.footerSocialLink {
+    color: #e3e3e3;
+    flex: 0 1 auto;
+    font-size: 16px;
+}
+
+.footerSocialLinkIcon {
+    height: 2em;
+    display: block;
+    fill: #e3e3e3;
+}
+
+.footerLinks {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 2em auto;
+    color: #e3e3e3;
+    max-width: 25em;
+    font-size: 16px;
+}
+
+.footerLinksLink {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 300;
+    color: #e3e3e3;
+    flex: 0 1 auto;
+}
+
+.footerLinksLinkPipe:before {
+    content: "";
+    display: inline-block;
+    height: .8em;
+    width: 1px;
+    background-color: #e3e3e3;
+    pointer-events: none;
+    margin: 0 1em;
+}
+
+.footerCopyright {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #e3e3e3;
+    font-weight: 100;
+}
+
+
+
+@media (max-width: 960px) {
+    .background {
+        top: 0;
+        position: fixed;
+        background-color: #1f120e;
+        background-position: 50%;
+        height: 100vh;
+        z-index: -1;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        background-image: url("https://townshiptale.com/static/bg_generic.jpg");
+
+    }
+}

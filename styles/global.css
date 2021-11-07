@@ -188,12 +188,7 @@ body {
 }
 
 a {
-    color: #f0f;
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 img {
