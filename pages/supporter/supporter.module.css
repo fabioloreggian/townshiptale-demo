@@ -144,11 +144,16 @@
     }
 
     .mainSupporterContainer {
+        margin: 50px 0 0;
         position: relative;
         overflow: hidden;
-        background-size: contain;
+        /*background-size: contain;
         background-position-x: center;
-        width: 100%;
+
+        width: 100%;*/
+        top: 0;
+        width: 52.21875em;
+        height: 38.15625em;
         font-size: clamp(6px,1.9vw,16px);
     }
 
@@ -196,10 +201,6 @@
         border-radius: 5px;
         -webkit-transition: .2s;
         transition: .2s;
-    }
-
-    .planContainer:hover {
-        transform: scale(1.00);
     }
 
     .planHeading {
