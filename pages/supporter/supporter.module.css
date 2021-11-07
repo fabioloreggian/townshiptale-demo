@@ -1,0 +1,258 @@
+.background {
+    background-image: url(https://altastatic.sfo2.cdn.digitaloceanspaces.com/supporter_background.jpg);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: repeat-y;
+    overflow: auto;
+    background-color: #3b2418;
+    color: #3b2418;
+}
+
+.mainSupporterContainer {
+    position: absolute;
+    background-image: url(https://altastatic.sfo2.cdn.digitaloceanspaces.com/supporter_board.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 52.21875rem;
+    height: 38.15625rem;
+    top: 3.5rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.supporterUl {
+    position: absolute;
+    top: 13rem;
+    left: 50%;
+    -webkit-transform: translateX(-61%);
+    transform: translateX(-61%);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.supportLi {
+    list-style-type: none;
+    font-size: 1.125rem;
+    line-height: 2.15625rem;
+    text-align: center;
+    color: #000;
+    font-weight: 300;
+}
+
+.supportImage {
+    height: 1.59375rem;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -.46875rem;
+}
+
+.plansContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: 36.75rem;
+    width: 100%;
+    height: 20.46875rem;
+}
+
+.planContainer {
+    position: relative;
+    width: 13.03125rem;
+    height: 20.4375rem;
+    margin: 0 1.875rem;
+    background-image: url(https://altastatic.sfo2.cdn.digitaloceanspaces.com/supporter_button.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    -webkit-transition: .2s;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.planContainer:hover {
+    transform: scale(1.05);
+}
+
+.planHeading {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.planHeading,
+.planSavings {
+    position: absolute;
+    font-weight: 300;
+    font-size: 1.6875rem;
+    text-align: center;
+    width: 100%;
+    line-height: 3.75rem;
+}
+
+.planSavings {
+    color: #ffc299;
+    top: 3.75rem;
+}
+
+.planAmount,
+.planPer {
+    position: absolute;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+.planAmount {
+    font-size: 2.8125rem;
+    line-height: 2.8125rem;
+    top: 8.203125rem;
+}
+
+.planPer {
+    font-size: 2rem;
+    line-height: 2rem;
+    top: 10.78125rem;
+    text-transform: lowercase;
+}
+
+.planBilled {
+    position: absolute;
+    font-weight: 300;
+    font-size: 1.3125rem;
+    color: #000;
+    text-align: center;
+    width: 100%;
+    line-height: 1.3125rem;
+    top: 14.765625rem;
+    text-transform: lowercase;
+}
+
+
+@media (max-width: 960px) {
+    .background {
+        top: 0;
+        background-image: none;
+        background-color: #1f120e;
+        background-position: 50%;
+        z-index: -1;
+    }
+
+    .mainSupporterContainer {
+        position: relative;
+        overflow: hidden;
+        background-size: contain;
+        background-position-x: center;
+        width: 100%;
+        font-size: clamp(6px,1.9vw,16px);
+    }
+
+    .supporterUl {
+        position: absolute;
+        top: 13em;
+        left: 50%;
+        -webkit-transform: translateX(-61%);
+        transform: translateX(-61%);
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        text-align: center;
+    }
+
+    .supportLi {
+        list-style-type: none;
+        font-size: 1.125em;
+        line-height: 2.15625em;
+        text-align: center;
+        color: #000;
+        font-weight: 400;
+    }
+
+    .plansContainer {
+        font-size: clamp(6px,1.9vw,16px);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        top: auto;
+        height: auto;
+    }
+
+    .planContainer {
+        position: relative;
+        width: 19.43362913096695em;
+        height: 30.47864137086904em;
+        margin: 0 2.796205630354958em;
+        background-image: url(https://altastatic.sfo2.cdn.digitaloceanspaces.com/supporter_button.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 5px;
+        -webkit-transition: .2s;
+        transition: .2s;
+    }
+
+    .planContainer:hover {
+        transform: scale(1.00);
+    }
+
+    .planHeading {
+        position: absolute;
+        font-weight: 300;
+        font-size: 2.516585067319462em;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        line-height: 2.25em;
+        text-transform: uppercase;
+    }
+
+    .planSavings {
+        font-size: 2.516585067em;
+        top: 2.9em;
+        position: absolute;
+        font-weight: 300;
+        text-align: center;
+        width: 100%;
+        line-height: 1em;
+    }
+
+    .planAmount {
+        font-size: 4.194308446em;
+        color: #fff;
+        top: 2.91em;
+        position: absolute;
+        font-weight: 300;
+        text-align: center;
+        width: 100%;
+        line-height: 1em;
+    }
+
+    .planBilled,
+    .plaPer {
+        position: absolute;
+        font-weight: 300;
+        text-align: center;
+        width: 100%;
+        line-height: 1em;
+        text-transform: lowercase;
+    }
+
+    .planPer {
+        font-size: 2.982619339em;
+        color: #fff;
+        top: 5.390625em;
+    }
+
+    .planBilled {
+        font-size: 1.957343941em;
+        color: #000;
+        top: 11em;
+    }
+}

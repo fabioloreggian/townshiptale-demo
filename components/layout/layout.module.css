@@ -109,6 +109,7 @@
     transition: transform .3s, opacity .3s, -webkit-transform .3s;
     flex-direction: column;
     padding: 12px;
+    box-shadow: 2px 0 5px -2px #000;
 }
 
 .sideNavInactive {
