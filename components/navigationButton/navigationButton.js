@@ -21,7 +21,7 @@ export default function NavigationButton({link, selected, index, size}) {
       </Link>
     );
   } else {
-    return <button className={getClassNames()} onClick={link.onClick}>
+    return <button className={getClassNames() + " logoCenter"} onClick={link.onClick}>
       <div className={styles.svg}>{link.svg}</div>
       <div className={styles.text}>{link.name}</div>
     </button>
