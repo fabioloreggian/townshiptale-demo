@@ -4,7 +4,8 @@ import styles from "./newsItem.module.css";
 
 export default function NewsItem() {
   const router = useRouter()
-  const { pid } = router.query
+  const { id } = router.query;
+  console.log(id);
 
   return <Layout route="news">
     <div className={styles.container}>
