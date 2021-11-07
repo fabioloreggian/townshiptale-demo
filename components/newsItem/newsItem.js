@@ -4,6 +4,9 @@ import Link from "next/link";
 export default function NewsItem({newsItem}) {
   return <Link href={"/news/" + newsItem.slug}>
     <a className={styles.newsItemsContainer}>
+      <div className={styles.mainPictureContainer}>
+        <img className={styles.mainPicture} src={newsItem.thumbnail}/>
+      </div>
       <img className={styles.authorThumbnail} src={newsItem.authorThumbnail}
            alt="Victor"/>
       <div className={styles.informationContainer}>

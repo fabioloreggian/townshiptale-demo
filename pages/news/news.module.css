@@ -153,6 +153,43 @@
         background-repeat: no-repeat;
         width: 100%;
         background-image: url("https://townshiptale.com/static/bg_generic.jpg");
+    }
 
+    .newsContainer {
+        font-size: clamp(6.5px,1.4vw,16px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 56em;
+    }
+
+    .headerContainer {
+        position: relative;
+        left: auto;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        width: 60em;
+        height: 11.3em;
+        z-index: 1;
+    }
+
+    .headerTitle {
+        text-align: center;
+        font-family: adorn-condensed-sans,sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        -webkit-transform: translate(-50%,-42%);
+        transform: translate(-50%,-42%);
+        font-weight: 400;
+        color: #f7ded2;
+        font-size: 3.85em;
+        margin: 0;
+        padding: 0;
+    }
+
+    .headerDescription{
+        display: none;
     }
 }
