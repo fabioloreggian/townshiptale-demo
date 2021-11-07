@@ -95,8 +95,60 @@
     transform: translateX(-50%);
 }
 
+.sideNav {
+    display: none;
+    font-size: 16px;
+    position: fixed;
+    top: 0;
+    right: auto;
+    height: 100%;
+    width: 16em;
+    background-color: #1f120e;
+    z-index: 111;
+    -webkit-transition: opacity .3s, -webkit-transform .3s;
+    transition: transform .3s, opacity .3s, -webkit-transform .3s;
+    flex-direction: column;
+    padding: 12px;
+}
+
+.sideNavInactive {
+    -webkit-transform: translate(-101%);
+    transform: translate(-101%);
+}
+
+.sideNavActive {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+}
+
+.sideNavLogoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid #000;
+}
+
+.sideNavLogo {
+    width: 12em;
+}
+
+.closeButton {
+    width: 1.5em;
+    height: 1.5em;
+    fill: #fff;
+    cursor: pointer;
+}
+
+.closeButton:hover {
+    fill: #ffb224;
+}
 
 @media (max-width: 960px) {
+
+    .sideNav {
+        display: flex;
+    }
+
     .topLeft,
     .topRight {
         display: none;

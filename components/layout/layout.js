@@ -10,21 +10,27 @@ import SignUp from "../svgs/signup";
 import Logo from "../svgs/logo";
 import Hamburger from "../svgs/hamburger";
 import BigLogo from "../svgs/bigLogo";
+import {useState} from "react";
+import Close from "../svgs/close";
 
 export default function Layout(props) {
+  const [sideNavOpen, setSideNavOpen] = useState(false);
+
   const links = [
     {
       name: '',
       key: 'home',
       page: true,
       link: '/',
-      svg: <Logo />
+      sideNav: false,
+      svg: <Logo/>
     },
     {
       name: 'Supporter',
       key: 'supporter',
       page: true,
       link: '/supporter',
+      sideNav: true,
       svg: <Supporter/>
     },
     {
@@ -32,6 +38,7 @@ export default function Layout(props) {
       key: 'news',
       page: true,
       link: '/news',
+      sideNav: true,
       svg: <News/>
     },
     {
@@ -39,6 +46,7 @@ export default function Layout(props) {
       key: 'discord',
       page: false,
       link: 'https://discord.gg/townshiptale',
+      sideNav: true,
       svg: <Discord/>
     },
     {
@@ -46,6 +54,7 @@ export default function Layout(props) {
       key: 'creators',
       page: false,
       link: 'https://form.typeform.com/to/Hjo1URZq',
+      sideNav: true,
       svg: <Creators/>
     },
     {
@@ -53,6 +62,7 @@ export default function Layout(props) {
       key: 'presskit',
       page: false,
       link: 'https://presskit.townshiptale.com/',
+      sideNav: true,
       svg: <Presskit/>
     },
     {
@@ -60,6 +70,7 @@ export default function Layout(props) {
       key: 'signup',
       page: true,
       link: '/account/signup',
+      sideNav: true,
       svg: <SignUp/>
     }
   ];
@@ -69,9 +80,9 @@ export default function Layout(props) {
       name: '',
       key: 'hamburger',
       onClick: () => {
-        console.log("Hello there");
+        setSideNavOpen(!sideNavOpen);
       },
-      svg: <Hamburger />
+      svg: <Hamburger/>
     },
     {
       name: '',
@@ -88,7 +99,8 @@ export default function Layout(props) {
       link: '/account/signup',
       svg: <SignUp/>
     }
-  ]
+  ];
+
   return (
     <div className={styles.container}>
       <div className={styles.navigationBar}>
@@ -113,11 +125,27 @@ export default function Layout(props) {
           </div>
         </div>
         <div className={styles.navigationContainer}>
-          {links.map((link, index) => <NavigationButton key={link.key} selected={link.key === props.route} link={link} index={index} size={links.length}/>)}
+          {links.map((link, index) => <NavigationButton key={link.key} selected={link.key === props.route} link={link}
+                                                        index={index} size={links.length}/>)}
         </div>
         <div className={styles.topBarMobile}>
-          {linksMobile.map((link, index) => <NavigationButton key={link.key} selected={link.key === props.route} link={link} index={index} size={linksMobile.length}/>)}
+          {linksMobile
+
+            .map((link, index) => <NavigationButton key={link.key} selected={link.key === props.route}
+                                                    link={link} index={index} size={linksMobile.length}/>)}
         </div>
+      </div>
+      <div className={styles.sideNav + " " + (sideNavOpen ? styles.sideNavActive : styles.sideNavInactive)}>
+        <div className={styles.sideNavLogoContainer}>
+          <BigLogo className={styles.sideNavLogo}/>
+          <a onClick={() => setSideNavOpen(!sideNavOpen)}>
+            <Close className={styles.closeButton}/>
+          </a>
+        </div>
+        {links
+          .filter(link => link.sideNav)
+          .map((link, index) => <NavigationButton key={link.key} selected={link.key === props.route} link={link}
+                                                  sideNav={true}/>)}
       </div>
       {props.children}
     </div>
